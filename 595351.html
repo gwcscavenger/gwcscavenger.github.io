@@ -3,9 +3,112 @@
 <html>
   <head>
     <title>Milwaukee</title>
+    <style>
+      .btn {
+        background-color: #2c87f0;
+        opacity:1;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 5px;
+      }
+
+      .btn:hover {
+        opacity:0.7;
+      }
+
+      .question p{
+        font-weight:bold;
+      }
+
+      .btn-submit {
+        background-color:white;
+        border: 2px solid #aaa;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 15px;
+      }
+
+      .btn-submit:hover {
+        background-color:#aaa;
+        color:white;
+      }
+    </style>
   </head>
   <body>
     <h1>That one was tough. Good job!</h1>
-    
+    <p style="color:green;">
+      If you can't get this one, don't cry! Seek consolation instead.
+    </p>
+    <center style="border:1px solid black;">
+      <div class="question">
+        <br>
+        <p>
+          What does HTML stand for?
+        </p>
+        <button class="btn" onclick="oneA()">Hi There My Love</button>
+        <button class="btn" onclick="oneB()">Holy Text Makeup Language</button>
+        <button class="btn" onclick="oneC()">Hyper Text Markup Langauge</button>
+      </div>
+      <div class="question">
+        <br><br>
+        <p>
+          What tag is used to add inline CSS styling?
+        </p>
+        <button class="btn" onclick="twoA()">style</button>
+        <button class="btn" onclick="twoB()">css</button>
+        <button class="btn" onclick="twoC()">inline</button>
+      </div>
+      <div class="question">
+        <br><br>
+        <p>
+          Which property-value pair (CSS) is formatted correctly?
+        </p>
+        <button class="btn" onclick="threeA()">color = white</button>
+        <button class="btn" onclick="threeB()">set color to white</button>
+        <button class="btn" onclick="threeC()">color: white;</button>
+      </div>
+      <div class="question">
+        <br><br>
+        <p>
+          Which line of code is used to change the styling of a element with id = abc?
+        </p>
+        <button class="btn" onclick="fourA()">document.getElementById("abc").style</button>
+        <button class="btn" onclick="fourB()">element("abc").style</button>
+        <button class="btn" onclick="fourC()">document.getElementById.abc.style</button>
+      </div>
+      <br>
+      <button class="btn-submit" onclick="finish()">Finish</button>
+      <h3 id="hint" style="color:red;display:none;">Combine your four answers to get the next link!</h3>
+      <br><br>
+    </center>
   </body>
+  <script>
+    var oneA = () => console.log("T");
+    var oneB = () => console.log("Y");
+    var oneC = () => console.log("K");
+
+    var twoA = () => console.log("A");
+    var twoB = () => console.log("P");
+    var twoC = () => console.log("L");
+
+    var threeA = () => console.log("E");
+    var threeB = () => console.log("R");
+    var threeC = () => console.log("C");
+
+    var fourA = () => console.log("Q");
+    var fourB = () => console.log("W");
+    var fourC = () => console.log("I");
+
+    var finish = () => {
+      document.getElementById("hint").style.display = 'block';
+    }
+  </script>
 </html>
